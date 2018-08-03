@@ -1,0 +1,247 @@
+.bid-new__header
+  margin-bottom 45px
+  display flex
+  align-items center
+
+.bid-new__title
+  margin-right 13px
+
+.bid-new__block
+  &+&
+    margin-top 70px
+
+.bid-new__subtitle
+  font-weight 700
+  font-size 16px
+  margin-bottom 35px
+  color blue-color
+  &.red
+    color red-color
+
+.bid-new__subsubtitle
+  color light-gray-color
+  font-family Montserrat
+  font-size 12px
+  font-weight 400
+  margin -30px 0 20px 60px
+  max-width 270px
+
+.bid-new__list
+  margin-bottom 30px
+
+.bid-new__item
+  position relative
+  @extend .flex-sb-center
+  &+&
+    margin-top 20px
+  &:hover
+    .bid-new__remove
+      opacity 0.7
+
+.bnc__count
+  font-size 14px
+  display block
+  margin-right 10px
+  width 14px
+
+.bnc__select
+  position relative
+  border 2px solid border-color
+  border-radius 2px
+  padding-right 17px
+  &:after
+    content ''
+    display block
+    width 7px
+    height 7px
+    border 1px solid transparent
+    border-bottom-color lighten-gray-color
+    border-right-color lighten-gray-color
+    transform translateY(-4px) rotate(45deg)
+    position absolute
+    right 12px
+    top 19px
+    @extend .trs
+  &.active
+    padding-bottom 120px
+    margin-bottom -120px
+    background-color main-bg-color
+    z-index 2
+    &:after
+      transform translateY(0px) rotate(-135deg)
+
+.bnc__option
+  display flex
+  align-items center
+  width 283px
+  height 40px
+  padding-left 15px
+  position relative
+  z-index 1
+  cursor pointer
+  &:before
+    content ''
+    display block
+    width 100%
+    height 100%
+    background border-color
+    position absolute
+    top 0
+    left 0
+    z-index -1
+    opacity 0
+    @extend .trs
+
+.bnc__option-icon
+  max-width 32px
+  margin-right 15px
+  img
+    width 100%
+
+.bnc__option-text
+  font-weight 700
+  font-size 12px
+
+.bnc__option-hide
+  position absolute
+  top 40px
+  left 0
+  height 120px
+  overflow-y scroll
+  .bnc__option
+    &:hover
+      &:before
+        opacity 1
+
+.bnc__text
+  font-weight 500
+  font-size 12px
+  display block
+  margin 0 10px
+  &--bold
+    font-weight 600
+
+.bnc__form-group--count
+  input
+    max-width 50px
+
+.bid-new__remove
+  display block
+  position absolute
+  right -20px
+  top 15px
+  width 15px
+  height 15px
+  cursor pointer
+  opacity 0
+  @extend .trs;
+  &:before,&:after
+    content ''
+    display block
+    height 1px
+    width 100%
+    background th-color
+    position absolute
+    top 7px
+    left 0
+  &:before
+    transform rotate(-45deg)
+  &:after
+    transform rotate(45deg)
+  &:hover
+    opacity 1
+
+.bnc__add
+  display flex
+  align-items center
+  margin-left 50px
+  cursor pointer
+  max-width 275px
+  padding 5px 0
+
+.bnc__add-icon
+  margin-right 10px
+
+.bnc__add-text
+  color light-gray-color
+
+.bno__list
+  display flex
+  flex-direction column
+  align-items flex-start
+
+.bno__item
+  align-self flex-start
+
+.bno__select
+  width 665px
+  height 43px
+  background transparent
+  border 2px solid border-color
+  border-radius 2px
+  color light-gray-color
+  font-size 12px
+  font-weight 700
+
+.bnd
+  display flex
+  align-items center
+
+.bnd__date,
+.bnd__time
+  input
+    max-width 150px
+    height 43px
+    background transparent
+    border 2px solid border-color
+    border-radius 2px
+    color light-gray-color
+    font-size 18px
+    font-weight 700
+    padding-left 10px
+
+.bnd__date--last,
+.bnd__time--last
+  margin-right 30px
+
+.bnd__time
+  span,
+  input
+    max-width 80px
+
+.bnd__check
+  margin-right 10px
+
+.bnd__check-input
+  display none
+  &:checked
+    & + .bnd__check-label
+      &:after
+        opacity 1    
+
+.bnd__check-label
+  position relative
+  padding-left 30px
+  cursor pointer
+  &:before,&:after
+    content ''
+    width 17px
+    height 17px
+    display block
+    position absolute
+    left 0
+    top 0px
+    @extend .trs
+  &:before
+    background-color green-color
+    border-radius 3px
+  &:after
+    background url('/static/img/general/check.png') center no-repeat
+    opacity 0
+
+.bid-new__buttons
+  display flex
+
+.bid-new__button
+  &+&
+    margin-left 30px

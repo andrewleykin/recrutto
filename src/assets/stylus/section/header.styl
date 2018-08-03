@@ -1,0 +1,108 @@
+.header
+  @extend .flex-sb-center
+  height 71px
+  box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+  background-color white
+  padding 0 30px 0 20px
+
+.header__logo
+  margin-right 20px
+
+.header__burger
+  width = 10px
+  height = 1px
+  translate = 3px
+  bg = black
+
+  margin-right 50px
+  cursor pointer
+  display flex
+  flex-direction column
+  &::before,&::after,span
+    content ""
+    display block
+    width width
+    height height
+    background bg
+  &::before
+    margin-bottom translate
+  &::after
+    margin-top translate
+  
+.header__search
+  margin-right 30px
+  width 100%
+  max-width 303px
+
+.header__search-form
+  position relative
+
+.header__search-input
+  @extend .auth__input
+
+.header__search-label
+  @extend .auth__label
+
+.header__search-btn
+  background-color transparent
+  position absolute
+  right 10px
+  top 10px
+  cursor pointer
+
+.header__block
+  display flex
+  align-items center
+  &+&
+    margin-left 27px
+  &:hover
+    .header__text
+      color blue-color
+
+.header__img
+  margin-right 8px
+
+.header__text
+  color light-gray-color
+  font-size 14px
+  @extend .trs
+
+.header__icons
+  margin-left auto
+
+.header__icon
+  &+&
+    margin-left 30px
+
+.header__letter
+  position relative
+  &:before
+    content ''
+    border 2px solid white
+    background-color red-color
+    width 13px
+    height 13px
+    border-radius 50%
+    position absolute
+    top -2px
+    right -6px
+    opacity 0
+    @extend .trs
+  &.active
+    &:before
+      opacity 1
+
+.header__user
+  margin-left 30px
+  display flex
+  align-items center
+  cursor pointer
+
+.header__user-photo
+  margin-right 9px
+
+.header__user-name
+  color light-gray-color
+  font-size 14px
+  display block
+  margin-right 15px

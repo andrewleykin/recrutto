@@ -1,0 +1,45 @@
+.breadcrumbs__list
+  display flex
+  align-items center
+  flex-wrap wrap
+  max-width 580px
+  padding-left 15px
+
+.breadcrumbs__block
+  margin-bottom 30px
+
+.breadcrumbs__item
+  &:first-child
+    text-indent -15px
+    .breadcrumbs__link
+      padding-left 0
+      @extend .trs
+      padding-right 25px
+      &:hover
+        opacity 0.7
+  &:nth-child(2)
+    margin-left -12px
+  &:last-child
+    .breadcrumbs__link
+      color lighten-gray-color
+      cursor default
+      &:before
+        display none
+
+.breadcrumbs__link
+  font-size 14px
+  font-weight 500
+  color blue-color
+  padding 0 20px 0 15px
+  position relative
+  @extend .trs
+  &:before
+    content '/'
+    display block
+    color blue-color
+    font-size 14px
+    position absolute
+    top 2px
+    right 0
+  &:hover
+    color light-blue-color

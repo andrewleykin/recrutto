@@ -1,0 +1,138 @@
+.table__header
+  padding 10px 20px
+
+.table__search
+  margin-left auto
+  .form__input
+    padding 5px 12px
+  .form__label
+    top 11px
+  .header__search-btn
+    max-width 16px
+    top 5px
+    img
+      width 100%
+
+.table__select
+  padding 5px 10px
+  margin-left 8px
+  border-radius 3px
+  border 1px solid border-color
+  color light-gray-color
+
+.table__ellipsis
+  margin-left 20px
+
+.table__table
+  width 100%
+  border-collapse: collapse;
+  tr
+    display flex
+    @extend .trs
+  th,td
+    padding 10px 0
+    color th-color
+    font-size 10px
+    font-weight 500
+    flex auto
+    text-align center
+    width 100%
+    vertical-align middle
+    display flex
+    justify-content center
+    align-items center
+    @extend .trs
+    &:first-child
+      flex none
+      max-width 215px
+    &:nth-child(2)
+      flex none
+      max-width 200px
+      text-align left
+      justify-content flex-start
+    &:last-child
+      flex none
+      max-width 321px
+      text-align left
+      justify-content flex-start
+  th
+    text-transform uppercase
+    &:after
+      content ''
+      width 7px
+      height 7px
+      border 1px solid transparent
+      border-bottom-color lighten-gray-color
+      border-right-color lighten-gray-color
+      transform translateY(-4px) rotate(45deg)
+      margin-left 8px
+      @extend .trs
+    &.active
+      &:after
+        transform translateY(0px) rotate(-135deg)
+  td
+    font-size 12px
+  thead
+    tr
+      &.active
+        padding-right 17px
+  tbody
+    display block
+    max-height 300px
+    overflow auto
+    tr
+      height 62px
+      &:nth-child(even)
+        background-color #fbfbfb
+      &:hover
+        background-color rgba(black, 0.05)
+        td
+          color light-gray-color
+      &.error
+        td
+          color red-color
+          &:first-child
+            &:before
+              opacity 0
+            &:after
+              opacity 1
+    td
+      &:first-child
+        position relative
+        &:before,&:after
+          content ''
+          display block
+          position absolute
+          width 14px
+          height 14px
+          top 50%
+          transform translateY(-50%)
+          left 13px
+          @extend .trs
+        &:before
+          background url('/static/img/general/star.png') center no-repeat
+        &:after
+          background url('/static/img/general/star-blue.png') center no-repeat
+          opacity 0
+      .icon
+        margin-right 15px
+  span
+    &.bid
+      @extend .flex-center
+      width 104px
+      height 23px
+      border-radius 10px
+      color white
+      font-size 9px
+      font-weight 500
+      &.selection
+        background-color blue-color
+      &.ready
+        background-color green-color
+      &.interview
+        background-color light-green-color
+      &.draft
+        background-color yellow-color
+        color light-gray-color
+      &.noready
+        background-color red-color

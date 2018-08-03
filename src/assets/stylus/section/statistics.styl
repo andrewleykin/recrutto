@@ -1,0 +1,95 @@
+.statistics__header
+  @extend .flex-sb-end
+  margin-bottom 20px
+
+.statistics__infoblock
+  margin-bottom 30px
+
+.statistics__graph
+  align-self flex-start
+
+
+.statistics__bid-content
+  padding 25px 20px 35px
+
+.statistics__bid-item
+  position relative
+  z-index 1
+  &:before
+    content ''
+    display block
+    position absolute
+    top: 10px;
+    left: 11px;
+    width: 1px;
+    height: 70%;
+    background-color: #eaeaea;
+    z-index: -1;
+  &+&
+    padding-top 35px
+    margin-top 35px
+    border-top 1px solid border-color
+  &.ready
+    .statistics__bid-man
+      background-color light-green-color
+    .statistics__bid-man--black
+      display none
+  &.work
+    .statistics__bid-man
+      background-color yellow-color
+    .statistics__bid-man--white
+      display none
+
+.statistics__bid-info
+  padding-left 32px
+  position relative
+  &:before,&:after
+    content ''
+    display block
+    width 24px
+    height 24px
+    position absolute
+    top -5px
+    left 0
+    border-radius 50%
+  &:before
+    background-color blue-color
+  &:after
+    background url('/static/img/general/plus.png') center no-repeat
+
+.statistics__bid-text
+  color light-gray-color
+  font-size 12px
+  line-height 18px
+  span
+    color lighten-gray-color
+    margin 0 5px
+
+.statistics__bid-time
+  margin-top 15px
+  display flex
+  align-items center
+  padding-bottom 28px
+  border-bottom 1px solid border-color
+  margin-bottom 10px
+
+.statistics__bid-icon
+  margin-right 8px
+
+.statistics__bid-timetext
+  color blue-color
+  font-size 10px
+  text-transform uppercase
+
+.statistics__bid-status
+  display flex
+
+.statistics__bid-man
+  margin-right 8px
+  width 24px
+  height 24px
+  border-radius 50%
+  @extend .flex-center
+
+.statistics__bid-text-perc
+  margin-left 5px

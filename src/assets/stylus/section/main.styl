@@ -1,0 +1,35 @@
+.main
+  size(100%)
+  min-height 700px
+
+.main__authorize
+  size(100%)
+
+.main__pages
+  display flex
+  flex-direction column
+  min-height 100%
+
+.main__wrap
+  display flex
+  flex auto
+
+.main__sidebar
+  max-width 250px
+  width 0
+  overflow hidden
+  @extend .trs
+  flex none
+  &.active
+    width 100%
+
+.main__content
+  flex auto
+  padding 30px 30px 100px
+  background-color bg-color
+  position relative
+
+.main__footer
+  position absolute
+  bottom 20px
+  left 30px
